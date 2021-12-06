@@ -1,0 +1,207 @@
+@charset "utf-8";
+body {font-size: 1.4rem;}
+
+/* header */
+header {
+  width: 100%;
+  height: 70px;
+  background: #2b2321;
+  position: relative;
+}
+header h1 a {
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: url(../img/logo.png) no-repeat center / 70px auto;
+  margin: 0 auto;
+}
+header button.btn_open {
+  width: 25px;
+  height: 70px;
+  background: url(../img/icon_menu.png) no-repeat center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+}
+nav {display: none;}
+nav ul li a {
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+
+header a.btn_store {
+  width: 25px;
+  height: 70px;
+  background: url(../img/icon_store.png) no-repeat center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+}
+
+
+/* footer */
+footer {
+  width: 100%;
+  height: 400px;
+  background:#2B2321;
+  color: #eee;
+  padding: 16px;
+  position: relative;
+}
+footer .sns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 45px;
+}
+footer .sns a {
+  width: 40px;
+  height: 40px;
+  margin-left: 7px;
+}
+footer .sns a.naver {
+  background: url(../img/icon_blog.png) no-repeat center / cover;
+}
+footer .sns a.fb {
+  background: url(../img/icon_facebook.png) no-repeat center / cover;
+}
+
+footer p {
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+footer p span, footer p strong{
+  display: block;
+  color: #F17E13;
+}
+footer p strong {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+
+
+/* ---------------------------------------768px */
+@media (min-width : 768px ){
+  header {
+    height: 90px;
+  }
+  header h1 a {
+    width: 70px;
+    height: 90px;
+    background-size: 90px auto;
+  }
+
+
+  /* footer */
+  footer {
+    height: 500px;
+  }
+  footer .sns a {
+    width: 70px;
+    height: 70px;
+    margin-left: 15px;
+  }
+}
+
+
+
+
+
+/* ---------------------------------------1100px */
+@media (min-width : 1100px ){
+  
+
+  /* header */
+  header {
+    height: 130px;
+  }
+  header h1 a {
+    width: 70px;
+    height: 130px;
+    background-size: 130px auto;    
+    margin: 0;
+  }
+  .btn_open, .btn_store {display: none;}
+  nav {
+    display: block;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 23px;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav li a {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+
+
+  /* footer */
+  footer {
+    padding: 40px 0;
+    height: 350px;
+  }
+  footer .sns {
+    width: 70px;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    justify-content: flex-start;
+    align-content: space-between;
+  }
+  footer .sns a {
+    margin-left: 0;
+  }
+}
+
+
+/* swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* font-size: 18px; */
+  /* background: #fff; */
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "";
+}
