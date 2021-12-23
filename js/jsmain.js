@@ -7,6 +7,17 @@ $(document).ready(function(){ //start
     },
   });
 
+  var idxLi = $(".page_line li").index(this);
+  var idxSlide = $(".swiper-slide").index(this);
+
+  $(".page_line li").click(function(){
+    if (idxLi == idxSlide) {
+      $(".page_line li").removeClass("on")
+      $(this).addClass("on")
+    }
+  })
+
+
   var swiper02 = new Swiper(".mySwiper02", {
     slidesPerView: 1,
     spaceBetween: 30,
